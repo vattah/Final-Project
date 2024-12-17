@@ -1,0 +1,18 @@
+---
+title: "Executive Summary"
+author: "Victor Attah,"
+date: "2024-12-16"
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This report presents a website designed to evaluate how NBA roster changes, including trades and player injuries, impact a team’s performance over the remainder of the current NBA season. It builds upon earlier work that calculated win probability on a team level, making the models rely on player-level data to make roster changes easier to implement. The website uses a probability model that relies on Box Plus/Minus (BPM), a metric that evaluates a player’s contribution to their team and the average points scored by all teams to predict win probabilities. Users can simulate scenarios, like trading a player to a different team or sidelining a player due to injury, and see the impact that has on projected team records. The website is easy to use and does not require a deep understanding of the statistics behind the simulations.
+
+The trade simulation feature allows users to select up to three players to trade between teams and view updated projected standings. For example, a user would be able to trade someone like Steph Curry to another team, and see the impact that trade has on the Warriors along with the rest of the NBA. The model recalculates win probabilities every time a roster move is made.
+
+Similarly, the injury simulation feature allows users to analyze the impact of players missing a specified number of games. These injured players are temporarily removed from the roster, showing how a team’s performance changes without them.
+
+The website is a useful tool that allows for quick scenario analysis. However, it’s important to note that BPM is a box-score stat, meaning that factors including team chemistry, coaching, effort, and other non-countable factors are not present in the model. Case studies, including modeling the impact of an injured Nikola Jokic, trading KD to Memphis, and trading Jimmy Butler to the Warriors, all had little to no impact on projected standings across the league. In the real world, all of these moves would’ve likely had a larger impact than the 0-1 win difference the model calculates, showing the limitations of the approach. Still, the website still serves as a useful tool for those interested in modeling the impact of various roster moves.
